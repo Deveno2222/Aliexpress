@@ -1,5 +1,25 @@
 {% extends 'base.html' %}
 
+{% block title %}Aliexpress{% endblock %}
+
 {% block content %}
-<h1>Test</h1>
+  <div class="mt-4 px-4 py-6 bg-light rounded">
+    <h2 class="mb-6 h2 text-center">New products</h2>
+
+    <div class="row row-cols-1 row-cols-md-3 g-3 text-center">
+      {% for product in products %}
+        <div class="col">
+          <a href="#" class="text-decoration-none">
+            <div class="card bg-light rounded">
+              <img src="{{ product.image.url }}" class="card-img-top rounded" style="height: 200px; object-fit: cover;" alt="Product Image">
+              <div class="card-body">
+                <h5 class="card-title">{{ product.name }}</h5>
+                <p class="card-text text-muted">Price: {{ product.price }}</p>
+              </div>
+            </div>
+          </a>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
 {% endblock %}
