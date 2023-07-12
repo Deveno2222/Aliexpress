@@ -24,7 +24,7 @@
         </div>
 
         {% if forms.errors or forms.non_field_errors %}
-          <div class="mb-3 p-6 bg-red-100 rounded">
+          <div class="bg-red-100 text-red-700 px-4 py-3 rounded-md mb-4">
             {% for field in form %}
               {{ field.errors }}
             {% endfor %}
