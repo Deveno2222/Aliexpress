@@ -32,3 +32,10 @@ def create(request):
     'form': form,
     'title': 'Create Product',
   })
+
+@login_required
+def delete(request, pk):
+  product = get_object_or_404(Product, pk=pk, created_by=request.user)
+  product.delete()
+
+  return redirect('dashboard:index')
