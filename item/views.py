@@ -1,7 +1,7 @@
 from django.contrib.auth.decorators import login_required
 from django.shortcuts import render, get_object_or_404, redirect
 from .models import Product
-from .forms import NewProductForm
+from .forms import NewProductForm, EditProductForm
 
 # Create your views here.
 def detail(request, pk):
@@ -31,6 +31,24 @@ def create(request):
   return render(request, 'item/create.html',{
     'form': form,
     'title': 'Create Product',
+  })
+
+@login_required
+def edit(request, pk):
+  product = get_object_or_404(Product, pk=pk, created_by=request.user)
+  if request.method == 'POST':
+    form = EditProductForm(request.POST, request.FILES, instance=product)
+
+    if form.is_valid():
+      form.save()
+
+      return redirect('item:detail', pk=product.id)
+  else:
+    form = EditProductForm(instance=product)
+
+  return render(request, 'item/create.html',{
+    'form': form,
+    'title': 'Edit Product',
   })
 
 @login_required

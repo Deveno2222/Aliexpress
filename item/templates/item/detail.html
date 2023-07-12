@@ -22,7 +22,7 @@
       {% if request.user == product.created_by %}
         <div class="mt-4 p-3 bg-light rounded shadow">
           <p class="text-dark">My product</p>
-          <a href="#" class="btn btn-success">Edit</a>
+          <a href="{% url 'item:edit' product.id %}" class="btn btn-success">Edit</a>
           <a href="{% url 'item:delete' product.id %}" class="btn btn-danger">Delete</a>
         </div>
       {% else %} 
