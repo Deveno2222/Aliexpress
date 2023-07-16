@@ -51,6 +51,26 @@
   </div>
 </div>
 
+<div>
+  <h2>Reviews</h2>
+  {% for review in product.reviews.all %}
+  <div class="comment">
+    <p>{{ review.content }}</p>
+    <p>By: {{ review.user.username }}</p>
+  </div>
+  {% empty %}
+    <p>No comments yet.</p>
+  {% endfor %}
+  {% if user.is_authenticated %}
+    <h2>Add a Review</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Submit</button>
+    </form>
+{% endif %}
+</div>
+
 
 
 
