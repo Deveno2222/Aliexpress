@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-3tl!$=a35#h%ssl7zlxbcon**+oz9sz5r8j!umpkpo8w$0o7&s'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['aliexpress-clone.azurewebsites.net']
 
