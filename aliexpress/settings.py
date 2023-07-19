@@ -11,7 +11,6 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 """
 
 from pathlib import Path
-import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -26,7 +25,7 @@ SECRET_KEY = 'django-insecure-3tl!$=a35#h%ssl7zlxbcon**+oz9sz5r8j!umpkpo8w$0o7&s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['aliexpressclone-server.azurewebsites.net']
+ALLOWED_HOSTS = ['aliclone.azurewebsites.net']
 
 CORS_ORIGIN_WHITELIST = [
     'https://aliexpressclone-server.azurewebsites.net',
