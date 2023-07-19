@@ -27,6 +27,10 @@ DEBUG = True
 
 ALLOWED_HOSTS = ['aliexpressclone-server.azurewebsites.net']
 
+CORS_ORIGIN_WHITELIST = [
+    'https://aliexpressclone-server.azurewebsites.net',
+]
+
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
 LOGOUT_REDIRECT_URL = '/'
