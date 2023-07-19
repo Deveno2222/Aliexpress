@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import logout
+from django.views.decorators.csrf import csrf_protect
 
 from item.models import Category, Product
 
@@ -14,7 +15,8 @@ def index(request):
     'categories': categories,
     'products': products,
   })
-
+  
+@csrf_protect
 def signup(request):
   if request.method == 'POST':
     form = SignUpForm(request.POST)
