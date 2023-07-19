@@ -60,4 +60,4 @@ jobs:
         with:
           app-name: 'AliClone'
           slot-name: 'Production'
-          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_8373B1CACBDB4A1C88571BB0BD8905D6 }}
+          publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_3BC91758F115431CB206A5673D6AC27D }}
