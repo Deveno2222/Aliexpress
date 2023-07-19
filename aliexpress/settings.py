@@ -25,11 +25,8 @@ SECRET_KEY = 'django-insecure-3tl!$=a35#h%ssl7zlxbcon**+oz9sz5r8j!umpkpo8w$0o7&s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['aliclone.azurewebsites.net']
+ALLOWED_HOSTS = ['aliexpress-clone.azurewebsites.net']
 
-CORS_ORIGIN_WHITELIST = [
-    'aliclone.azurewebsites.net',
-]
 
 LOGIN_URL = '/login/'
 LOGIN_REDIRECT_URL = '/'
