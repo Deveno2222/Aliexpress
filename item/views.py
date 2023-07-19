@@ -3,10 +3,9 @@ from django.shortcuts import render, get_object_or_404, redirect
 from .models import Product
 from .forms import NewProductForm, EditProductForm
 from reviews.forms import ReviewForm
-from django.views.decorators.csrf import csrf_protect
 
 # Create your views here.
-@csrf_protect
+
 def detail(request, pk):
   product = get_object_or_404(Product, pk=pk)
   related_products = Product.objects.filter(category=product.category, is_sold=False).exclude(pk=pk)[0:3]
@@ -31,7 +30,7 @@ def detail(request, pk):
     'form': form,
   })
 
-@csrf_protect
+
 @login_required
 def create(request):
   if request.method == 'POST':
@@ -51,7 +50,6 @@ def create(request):
     'title': 'Create Product',
   })
   
-@csrf_protect
 @login_required
 def edit(request, pk):
   product = get_object_or_404(Product, pk=pk, created_by=request.user)

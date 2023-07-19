@@ -16,7 +16,6 @@ def index(request):
     'products': products,
   })
   
-@csrf_protect
 def signup(request):
   if request.method == 'POST':
     form = SignUpForm(request.POST)
