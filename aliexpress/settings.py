@@ -62,7 +62,6 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-CSRF_TRUSTED_ORIGINS = ['https://'+ os.environ['https://aliexpressclone-server.azurewebsites.net']]
 
 ROOT_URLCONF = 'aliexpress.urls'
 
