@@ -4,4 +4,4 @@
 --trusted-host pypi.org
 
 django==3.2.5
-pillow==*
+pillow==8.3.1
