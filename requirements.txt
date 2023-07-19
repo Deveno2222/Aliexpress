@@ -3,5 +3,5 @@
 --extra-index-url https://pypi.org/simple
 --trusted-host pypi.org
 
-django==*
+django==3.2.5
 pillow==*
