@@ -27,7 +27,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['aliexpress-clone.azurewebsites.net','http://aliexpress-clone.azurewebsites.net','localhost']
 
-CSRF_TRUSTED_ORIGINS = ['aliexpress-clone.azurewebsites.net']
+CSRF_TRUSTED_ORIGINS = ['http://aliexpress-clone.azurewebsites.net']
 
 
 LOGIN_URL = '/login/'
