@@ -9,7 +9,7 @@ https://docs.djangoproject.com/en/4.2/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.2/ref/settings/
 """
-
+import os
 from pathlib import Path
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -25,9 +25,9 @@ SECRET_KEY = 'django-insecure-3tl!$=a35#h%ssl7zlxbcon**+oz9sz5r8j!umpkpo8w$0o7&s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['aliexpress-clone.azurewebsites.net','https://aliexpress-clone.azurewebsites.net','localhost']
+ALLOWED_HOSTS = ['aliexpressclone.azurewebsites.net','https://aliexpressclone.azurewebsites.nett','localhost','127.0.0.1']
 
-CSRF_TRUSTED_ORIGINS = ['https://aliexpress-clone.azurewebsites.net']
+CSRF_TRUSTED_ORIGINS = ['https://aliexpressclone.azurewebsites.net']
 
 
 LOGIN_URL = '/login/'
@@ -66,9 +66,7 @@ ROOT_URLCONF = 'aliexpress.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [
-            'templates'
-        ],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -131,7 +129,7 @@ USE_TZ = True
 
 STATIC_URL = 'static/'
 STATICFILES_DIRS = [
-    BASE_DIR / 'static',
+    os.path.join(BASE_DIR, "static"),
 ]
 
 MEDIA_URL = 'media/'
