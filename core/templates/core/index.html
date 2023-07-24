@@ -1,16 +1,31 @@
 {% extends 'base.html' %}
 
+
 {% block title %}Aliexpress{% endblock %}
 
 {% block content %}
-  <div class="mt-4 px-4 py-6 bg-light rounded">
-    <h2 class="mb-6 h2 text-center">New products</h2>
+<div class="row">
+  <div class="col-md-3">
+    <div class="mt-4 px-4 py-6 rounded">
+      <h4 class="mb-6 h4">Categories ></h4>
 
-    <div class="row row-cols-1 row-cols-md-3 g-3 text-center">
+      <ul class="list-unstyled text-muted">
+        {% for category in categories %}
+          <li>
+            <a href="#" class="text-decoration-none">
+              {{ category.name }} <span class="badge bg-secondary">{{ category.products.count }} items</span>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+  <div class="mt-4 px-4 py-6 rounded col-md-9">
+    <div class="row row-cols-1 row-cols-md-4 g-4 text-center">
       {% for product in products %}
         <div class="col">
           <a href="{% url 'item:detail' product.id %}" class="text-decoration-none">
-            <div class="card bg-light rounded">
+            <div class="card">
               <img src="{{ product.image.url }}" class="card-img-top rounded" style="height: 200px; object-fit: cover;" alt="Product Image">
               <div class="card-body">
                 <h5 class="card-title">{{ product.name }}</h5>
@@ -22,22 +37,5 @@
       {% endfor %}
     </div>
   </div>
-  <div class="mt-4 px-4 py-6 bg-light rounded">
-    <h2 class="mb-6 h2 text-center">Categories</h2>
-
-    <div class="row row-cols-1 row-cols-md-3 g-3 text-center">
-      {% for category in categories %}
-        <div class="col">
-          <a href="#" class="text-decoration-none">
-            <div class="card bg-light rounded">
-              <div class="card-body">
-                <h5 class="card-title">{{ category.name }}</h5>
-                <p class="card-text text-muted">{{ category.products.count }} items </p>
-              </div>
-            </div>
-          </a>
-        </div>
-      {% endfor %}
-    </div>
-  </div>
+</div>
 {% endblock %}
