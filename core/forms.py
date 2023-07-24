@@ -5,11 +5,11 @@ from django.contrib.auth.models import User
 class LoginForm(AuthenticationForm):
   username = forms.CharField(widget=forms.TextInput(attrs={
     'placeholder': 'Your username',
-    'class': 'w-100 py-2 px-6 rounded'
+    'class': 'form-control'
   }))
   password = forms.CharField(widget=forms.PasswordInput(attrs={
     'placeholder': 'Your password',
-    'class': 'w-100 py-2 px-6 rounded'
+    'class': 'form-control'
   }))
 
 class SignUpForm(UserCreationForm):
@@ -19,17 +19,17 @@ class SignUpForm(UserCreationForm):
 
   username = forms.CharField(widget=forms.TextInput(attrs={
     'placeholder': 'Your username',
-    'class': 'w-100 py-2 px-6 rounded'
+    'class': 'form-control'
   }))
   email = forms.CharField(widget=forms.EmailInput(attrs={
     'placeholder': 'Your email address',
-    'class': 'w-100 py-2 px-6 rounded'
+    'class': 'form-control'
   }))
   password1 = forms.CharField(widget=forms.PasswordInput(attrs={
     'placeholder': 'Your password',
-    'class': 'w-100 py-2 px-6 rounded'
+    'class': 'form-control'
   }))
   password2 = forms.CharField(widget=forms.PasswordInput(attrs={
     'placeholder': 'Repeat password',
-    'class': 'w-100 py-2 px-6 rounded'
+    'class': 'form-control'
   }))
