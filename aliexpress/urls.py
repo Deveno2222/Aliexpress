@@ -10,6 +10,7 @@ urlpatterns = [
     path('items/', include('item.urls')),
     path('dashboard/', include('dashboard.urls')),
     path('', include('core.urls'), name='home'),
+    path('category/', include('category.urls'), name='category'),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 if settings.DEBUG:
