@@ -35,6 +35,9 @@
           <div class="d-flex">
             <a href="#" class="btn btn-outline-primary me-2">Inbox</a>
             <a href="{% url 'dashboard:index' %}" class="btn btn-outline-secondary me-2">Dashboard</a>
+            {% if request.user.is_superuser %}
+              <a href="{% url 'category:category_list' %}" class="btn btn-outline-success me-2">Create Category</a>
+            {% endif %}
             <a href="{% url 'core:logout' %}" class="btn btn-outline-secondary">Exit</a>
           </div>
           {% else %}

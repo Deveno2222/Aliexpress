@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'item',
     'dashboard',
     'reviews',
+    'category',
 ]
 
 MIDDLEWARE = [
