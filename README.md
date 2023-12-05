@@ -3,8 +3,8 @@
 * Install the dependencies: pipenv install
 * pipenv shell
 * python manage.py migrate
-* Start the development server: python manage.py runs
-/
+* Start the development server: python manage.py runserver
+  
 # Registration
 
 # Admin panel
