@@ -8,25 +8,25 @@
     <div class="col-md-6">
       <form method="post" action="." class="border rounded p-4">
         {% csrf_token %}
-        <h2 class="text-center mb-4">Sign Up</h2>
+        <h2 class="text-center mb-4">Регистрация</h2>
 
         <div class="form-group mb-2">
-          <label class="inline-block mb-2">Username</label><br>
+          <label class="inline-block mb-2">Логин</label><br>
           {{ form.username }}
         </div>
 
         <div class="form-group mb-2">
-          <label class="inline-block mb-2">Email</label><br>
+          <label class="inline-block mb-2">Почта</label><br>
           {{ form.email }}
         </div>
 
         <div class="form-group mb-2">
-          <label class="inline-block mb-2">Password</label><br>
+          <label class="inline-block mb-2">Пароль</label><br>
           {{ form.password1 }}
         </div>
 
         <div class="form-group mb-2">
-          <label class="inline-block mb-2">Repeat password</label><br>
+          <label class="inline-block mb-2">Повторите пароль</label><br>
           {{ form.password2 }}
         </div>
 
@@ -45,7 +45,7 @@
         </div>
         {% endif %}
         <div class="d-grid col-6 mx-auto mt-4">
-          <button type="submit" class="btn btn-success btn-block">Sign Up</button>
+          <button type="submit" class="btn btn-success btn-block">Регистрация</button>
         </div>
       </form>
     </div>

@@ -7,13 +7,13 @@
 <div class="row">
   <div class="col-md-3">
     <div class="mt-4 px-4 py-6 rounded">
-      <h4 class="mb-6 h4">Categories ></h4>
+      <h4 class="mb-6 h4">Категории</h4>
 
       <ul class="list-unstyled text-muted">
         {% for category in categories %}
           <li>
             <a href="#" class="text-decoration-none">
-              {{ category.name }} <span class="badge bg-secondary">{{ category.products.count }} items</span>
+              {{ category.name }} <span class="badge bg-secondary">{{ category.products.count }} товаров</span>
             </a>
           </li>
         {% endfor %}
@@ -29,7 +29,7 @@
               <img src="{{ product.image.url }}" class="card-img-top rounded" style="height: 200px; object-fit: cover;" alt="Product Image">
               <div class="card-body">
                 <h5 class="card-title">{{ product.name }}</h5>
-                <p class="card-text text-muted">Price: {{ product.price }} $</p>
+                <p class="card-text text-muted">Цена: {{ product.price }} $</p>
               </div>
             </div>
           </a>
