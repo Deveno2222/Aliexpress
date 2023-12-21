@@ -3,7 +3,7 @@
 {% block title %}Add category{% endblock %}
 
 {% block content %}
-<h2>Add Category</h2>
+<h2>Добавить категорию</h2>
 <form method="post" class="needs-validation" novalidate>
     {% csrf_token %}
     {% for field in form %}
@@ -19,7 +19,7 @@
             {% endif %}
         </div>
     {% endfor %}
-    <button type="submit" class="btn btn-primary">Save</button>
+    <button type="submit" class="btn btn-primary">Сохранить</button>
 </form>
 
 {% endblock %}
